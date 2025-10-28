@@ -9,8 +9,8 @@ import SwiftUI
 import AmpFinKit
 import AFPlayback
 
-internal extension NowPlaying {
-    struct RegularView: View {
+public extension NowPlaying {
+    public struct RegularView: View {
         @Environment(ViewModel.self) private var viewModel
         @Environment(\.dismiss) private var dismiss
         

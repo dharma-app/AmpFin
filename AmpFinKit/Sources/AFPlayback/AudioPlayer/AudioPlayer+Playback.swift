@@ -190,7 +190,7 @@ extension AudioPlayer: AudioEndpoint {
         endpoint?.restorePlayed(upTo: index)
     }
     
-    internal func startPlayback(tracks: [AFFoundation.Track], startIndex: Int, shuffle: Bool) { exit(1) }
-    internal func queue(_ track: AFFoundation.Track, after index: Int, updateUnalteredQueue: Bool) { exit(1) }
-    internal func queue(_ tracks: [AFFoundation.Track], after index: Int) { exit(1) }
+    public func startPlayback(tracks: [AFFoundation.Track], startIndex: Int, shuffle: Bool) { exit(1) }
+    public func queue(_ track: AFFoundation.Track, after index: Int, updateUnalteredQueue: Bool) { exit(1) }
+    public func queue(_ tracks: [AFFoundation.Track], after index: Int) { exit(1) }
 }

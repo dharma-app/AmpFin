@@ -10,17 +10,17 @@ import SwiftUI
 import AmpFinKit
 import AFPlayback
 
-internal struct NowPlaying {
+public struct NowPlaying {
     private init() {}
     
-    enum Tab {
+    public enum Tab {
         case cover
         case lyrics
         case queue
     }
 }
 
-internal extension NowPlaying {
+public extension NowPlaying {
     static let widthChangeNotification = NSNotification.Name("io.rfk.ampfin.sidebar.width.changed")
     static let offsetChangeNotification = NSNotification.Name("io.rfk.ampfin.sidebar.offset.changed")
 }

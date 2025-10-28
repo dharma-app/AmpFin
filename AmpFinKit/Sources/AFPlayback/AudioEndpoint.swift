@@ -8,7 +8,7 @@
 import Foundation
 import AFFoundation
 
-protocol AudioEndpoint {
+public protocol AudioEndpoint {
     var playing: Bool { get set }
     var volume: Float { get set }
     

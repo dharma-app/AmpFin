@@ -11,19 +11,19 @@ import RFKVisuals
 import AmpFinKit
 import AFPlayback
 
-internal extension NowPlaying {
+public extension NowPlaying {
     @Observable
-    class ViewModel {
+    public class ViewModel {
         // MARK: Presentation
         
-        @ObservationIgnored var namespace: Namespace.ID!
+        @ObservationIgnored public var namespace: Namespace.ID!
         @MainActor var _dragOffset: CGFloat
         @MainActor private var dragFinished: Bool
         
         @MainActor private var _expanded: Bool
         @MainActor private var expandFinished: Bool
         
-        @MainActor var queueTab: QueueTab? = .queue
+        @MainActor public var queueTab: QueueTab? = .queue
         @MainActor private(set) var currentTab: NowPlaying.Tab
         
         // MARK: Current presentation state
@@ -89,7 +89,7 @@ internal extension NowPlaying {
         @ObservationIgnored private var tokens = [Any]()
         
         @MainActor
-        init() {
+        public init() {
             namespace = nil
             _dragOffset = .zero
             dragFinished = true
@@ -147,7 +147,7 @@ internal extension NowPlaying {
         }
     }
     
-    enum QueueTab: Hashable, Identifiable, Equatable, CaseIterable {
+    public enum QueueTab: Hashable, Identifiable, Equatable, CaseIterable {
         case history
         case queue
         case infiniteQueue
@@ -160,7 +160,7 @@ internal extension NowPlaying {
 
 // MARK: Properties
 
-internal extension NowPlaying.ViewModel {
+public extension NowPlaying.ViewModel {
     @MainActor
     var expanded: Bool {
         get {

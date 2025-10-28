@@ -168,5 +168,11 @@ public extension AudioPlayer {
 }
 
 public extension AudioPlayer {
+    func configureExternalEndpoint(_ endpoint: AudioEndpoint, source: PlaybackSource = .local) {
+        self.endpoint = endpoint
+        self.source = source
+        signalEndpointChange()
+    }
+    
     static let current = AudioPlayer()
 }
